@@ -69,26 +69,38 @@
 
   <div class="container">
     <h3>Filtros</h3>
-    <form>
+    <form id="formula">
       <label for="regiao">Região:</label>
-      <input type="text" id="regiao" name="regiao" value="All">
+     <select name="" id="select">
+      <option value="1">All</option>
+      <option value="2">SP</option>
+      <option value="3">RJ</option>
+     </select>
       <br>
       <label for="especies">Espécies:</label>
-      <input type="text" id="especies" name="especies" value="All">
+      <select name="" id="select">
+        <option value="1">All</option>
+        <option value="2">Mamiferos</option>
+        <option value="3">Carnivoros</option>
+       </select>
       <br>
       <label for="conservacao">Status de conservação</label>
-      <input type="text" id="conservacao" name="conservacao" value="All">
+      <select name="" id="select">
+        <option value="1">All</option>
+        <option value="2">Conservado</option>
+        <option value="3">Inabitavel</option>
+       </select>
       <br>
       <label for="temperatura">Temperatura de água:</label>
-      <input type="text" id="temperatura" name="temperatura">
+      <input type="text" id="temperatura" name="temperatura" placeholder="Ex: 22">
       <br>
       <label for="pH">pH:</label>
-      <input type="text" id="ph" name="ph">
+      <input type="text" id="ph" name="ph" placeholder="Ex: 1.2">
       <br>
       <label for="poluicao">Níveis de poluição:</label>
-      <input type="text" id="poluicao" name="poluicao">
+      <input type="text" id="poluicao" name="poluicao" placeholder="Ex: 10">
       <br>
-      <button type="submit">Procurar</button>
+      <button type="submit" id="sub">Procurar</button>
     </form>
   </div>
 
@@ -96,28 +108,31 @@
     <h3>Tabela de dados</h3>
     <table>
       <tr>
-        <th>Coluna 1</th>
-        <th>Coluna 2</th>
-        <th>Coluna 3</th>
-        <th>Coluna 4</th>
+        <th>Region</th>
+        <th>Species</th>
+        <th>Conservation Status</th>
+        <th>Watter Temperature</th>
+        <th>pH</th>
+        <th>Pollution Levels</th>
       </tr>
+
+    <tbody>
       <tr>
-        <td>Dado 1</td>
-        <td>Dado 2</td>
-        <td>Dado 3</td>
-        <td>Dado 4</td>
+        <td>All</td>
+        <td>Mamiferos</td>
+        <td>Conservado</td>
+        <td>1.1</td>
+        <td>2.2</td>
+        <td>3.3</td>
       </tr>
+
       <tr>
-        <td>Dado 1</td>
-        <td>Dado 2</td>
-        <td>Dado 3</td>
-        <td>Dado 4</td>
-      </tr>
-      <tr>
-        <td>Dados</td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>All</td>
+        <td>Carnivoros</td>
+        <td>Inabital</td>
+        <td>1.1</td>
+        <td>2.2</td>
+        <td>3.3</td>
       </tr>
     </table>
   </div>
