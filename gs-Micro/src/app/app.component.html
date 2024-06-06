@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html>
-
 <head>
   <style>
     body {
@@ -76,30 +73,30 @@
     </div>
 </div>
 
-  <div class="container">
-    <h3>Filtros</h3>
-    <form id="formula">
-      <label for="regiao">Região:</label>
-     <select name="" id="select">
-      <option value="1">All</option>
-      <option value="2">SP</option>
-      <option value="3">RJ</option>
-     </select>
-      <br>
-      <label for="especies">Espécies:</label>
-      <select name="" id="select">
-        <option value="1">All</option>
-        <option value="2">Mamiferos</option>
-        <option value="3">Carnivoros</option>
-       </select>
-      <br>
-      <label for="conservacao">Status de conservação</label>
-      <select name="" id="select">
-        <option value="1">All</option>
-        <option value="2">Conservado</option>
-        <option value="3">Inabitavel</option>
-       </select>
-      <br>
+ <div class="container">
+  <h3>Filtros</h3>
+  <form (submit)="onSubmit()">
+    <label for="region">Região:</label>
+    <select name="region" id="region" [(ngModel)]="region">
+      <option value="All">All</option>
+      <option value="SP">SP</option>
+      <option value="RJ">RJ</option>
+    </select>
+    <br>
+    <label for="species">Espécies:</label>
+    <select name="species" id="species" [(ngModel)]="species">
+      <option value="All">All</option>
+      <option value="Mamiferos">Mamiferos</option>
+      <option value="Carnivoros">Carnivoros</option>
+    </select>
+    <br>
+    <label for="conservationStatus">Status de conservação</label>
+    <select name="conservationStatus" id="conservationStatus" [(ngModel)]="conservationStatus">
+      <option value="All">All</option>
+      <option value="Conservado">Conservado</option>
+      <option value="Inabitavel">Inabitavel</option>
+    </select>
+         <br>
       <label for="temperatura">Temperatura de água:</label>
       <input type="text" id="temperatura" name="temperatura" placeholder="Ex: 22">
       <br>
@@ -147,4 +144,3 @@
   </div>
 </body>
 
-</html>
