@@ -1,0 +1,82 @@
+<div class="container">
+  <h3>Filtros</h3>
+  <form (ngSubmit)="onSubmit()">
+    <label for="region">Região:</label>
+    <select name="region" id="region" [(ngModel)]="opcoesForm">
+      <option *ngFor="let opcao of opcoes" [value]="opcao">{{ opcao }}</option>
+    </select>
+    <br>
+
+
+    <label for="species">Espécies:</label>
+    <select name="species" id="species" [(ngModel)]="speciesForm">
+      <option *ngFor="let specie of species" [value]="specie">{{ specie }}</option>
+    </select>
+    <br>
+
+
+    <label for="conservationStatus">Status de conservação</label>
+    <select name="conservationStatus" id="conservationStatus" [(ngModel)]="conservationStatusForm">
+      <option *ngFor="let status of conservationStatus" [value]="status">{{ status }}</option>
+    </select>
+    <br>
+
+
+    <label for="temperatura">Temperatura de água:</label>
+    <input type="number" id="temperatura" name="temperatura" placeholder="Ex: 22" [(ngModel)]="temperaturaForm">
+    <br>
+
+    <label for="pH">pH:</label>
+    <input type="number" id="ph" name="ph" placeholder="Ex: 1.2" [(ngModel)]="phForm">
+    <br>
+
+    <label for="poluicao">Níveis de poluição:</label>
+    <select name="poluicao" id="poluicao" [(ngModel)]="poluicaoForm">
+      <option *ngFor="let polui of poluicao" [value]="polui">{{ polui }}</option>
+    </select>
+    <br>
+
+
+    <button type="submit" id="sub">Enviar</button>
+
+  </form>
+
+
+
+  <div *ngIf="retorno" class="container">
+
+    <h3>Tabela de dados</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Regiao</th>
+          <th>Temperatura</th>
+          <th>pH</th>
+          <th>Nivel Poluicao</th>
+          <th>Especie Nome</th>
+          <th>Especie Status</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let DataItem of retorno">
+        <td> {{ DataItem.regiao }}</td>
+        <td> {{ DataItem.temperaturaAgua }}</td>
+        <td> {{ DataItem.pH }}</td>
+        <td> {{ DataItem.nivelPoluicao }}</td>
+      
+      <td>
+        <ul>
+          <li *ngFor="let especie of DataItem.especies">{{especie.nome}}</li>
+        </ul>
+      </td>
+
+      <td>
+        <ul>
+          <li *ngFor="let especie of DataItem.especies">{{especie.status}}</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+
+    </table>
+  </div>
