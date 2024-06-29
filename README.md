@@ -7,4 +7,3 @@ Instruções para a execução da aplicação:
 comando npm updat
 
 ![image](https://github.com/FIAP-2024-3SIS/gs-microservice-lucas/assets/74216841/4f6c97d9-4e48-4b6e-a3ea-1dc2a58fb0b6)
-![image](https://github.com/FIAP-2024-3SIS/gs-microservice-lucas/assets/74216841/4f6c97d9-4e48-4b6e-a3ea-1dc2a58fb0b6)
